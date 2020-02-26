@@ -115,21 +115,3 @@ class Sudoku:
             else:
                 pass
         return True
-
-
-doku = Sudoku()
-# doku.backtracking(doku.feld)
-
-# print(doku.feld)
-
-#doku.feld[2][3] = 0
-#doku.feld[5][6] = 0
-#doku.feld[1][8] = 0
-
-doku.create_missing_element_list()
-doku.backtrack_solver(doku.feld)
-
-
-print(doku.feld)
-
-print("Success")
