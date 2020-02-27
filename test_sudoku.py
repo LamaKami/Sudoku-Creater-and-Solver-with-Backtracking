@@ -6,14 +6,14 @@ class TestStringMethods(unittest.TestCase):
 
     def test_colums_not_correct(self):
         test = Sudoku()
-        test.set_value(5, 0, 2)
-        test.set_value(5, 8, 2)
+        test.set_value(0, 5, 2)
+        test.set_value(8, 5, 2)
         self.assertFalse(test.check_colums())
 
     def test_row_not_correct(self):
         test = Sudoku()
-        test.set_value(7, 6, 2)
-        test.set_value(5, 6, 2)
+        test.set_value(6, 7, 2)
+        test.set_value(6, 5, 2)
         self.assertFalse(test.check_rows())
 
     def test_specific_square_not_correct(self):
@@ -23,7 +23,7 @@ class TestStringMethods(unittest.TestCase):
         for i in range(x * 3, x * 3 + 3):
             for k in range(y * 3, y * 3 + 3):
                 test.set_value(k, i, 3)
-        self.assertFalse(test.check_specific_square(1, 5))
+        self.assertFalse(test.check_specific_square(5, 1))
 
     def test_all_square_not_correct(self):
         test = Sudoku()
