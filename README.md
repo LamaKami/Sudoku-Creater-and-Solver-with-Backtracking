@@ -2,8 +2,9 @@
 Work in Progress
 
 Done:
-  Recursiv Backtracking
+  Recursiv Backtracking with 9x9
   
   
 To-Do:
-  GUI with Pygame
+  - larger size 12x12 or higher
+  - GUI with Pygame
