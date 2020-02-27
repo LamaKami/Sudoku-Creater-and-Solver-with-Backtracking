@@ -37,7 +37,6 @@ class TestStringMethods(unittest.TestCase):
                         test.set_value(k, i, counter)
                         counter += 1
         test.set_value(5, 6, 2)
-        print(test.field)
         self.assertFalse(test.check_all_squares())
 
     def test_colums_correct(self):
@@ -66,15 +65,7 @@ class TestStringMethods(unittest.TestCase):
 
     def test_all_square_correct(self):
         test = Sudoku()
-        for l in range(9):
-            for m in range(9):
-                counter = 1
-                x = l // 3
-                y = m // 3
-                for i in range(x * 3, x * 3 + 3):
-                    for k in range(y * 3, y * 3 + 3):
-                        test.set_value(k, i, counter)
-                        counter += 1
+        test.backtracking(test.field)
         self.assertTrue(test.check_all_squares())
 
 
