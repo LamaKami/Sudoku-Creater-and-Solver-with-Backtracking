@@ -37,7 +37,7 @@ class TestStringMethods(unittest.TestCase):
                         test.set_value(k, i, counter)
                         counter += 1
         test.set_value(5, 6, 2)
-        print(test.feld)
+        print(test.field)
         self.assertFalse(test.check_all_squares())
 
     def test_colums_correct(self):
